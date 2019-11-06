@@ -57,6 +57,9 @@ export default {
 }
 .header-title {
   flex: 1;
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
   /* justify-content: center; */
   /* align-items: center; */
 }

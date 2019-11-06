@@ -25,7 +25,7 @@
         <span>《用户服务协议》</span>
       </p>
     </div>
-    
+
     <!-- 登录按钮 -->
     <div class="login_btn">
       <button :disabled="isClick" @click="handleLogin">登录</button>
@@ -58,7 +58,11 @@ export default {
       // 取消错误提醒
       this.errors = {};
       // 发送请求
-      this.$axios
+
+      // 先做验证请求吧。
+      localStorage.setItem("ele_login", true);
+      this.$router.push("/");
+      /* this.$axios
         .post("/api/posts/sms_back", {
           phone: this.phone,
           code: this.verifyCode
@@ -76,7 +80,7 @@ export default {
           };
           localStorage.setItem("ele_login", true);
           this.$router.push("/");
-        });
+        }); */
     },
     //获取验证码
     getVerifyCode() {
