@@ -1,5 +1,6 @@
 module.exports = {
   devServer: {
+    // assetsPublicPath: './',
     open: false,
     host: 'localhost',
     port: 8080,

@@ -1,6 +1,7 @@
 <template>
   <section class="index-container">
-    <div class="index-shopInfo">
+    <!-- 这里每一个div都是一个商品 -->
+    <div class="index-shopInfo" @click="$router.push('/shop')">
       <!-- 左侧图片 -->
       <div class="logo_container">
         <img :src="restaurant.image_path" alt />
@@ -96,7 +97,7 @@ export default {
   align-items: center;
   color: #333;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .index_shopname i {
   background: #ffe800;

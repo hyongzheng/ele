@@ -7,8 +7,7 @@ const routes = [{
     path: '/',
     // name: 'index',
     component: () => import('../views/index.vue'),
-    children: [
-      {
+    children: [{
         path: '',
         redirect: '/home',
       },
@@ -28,12 +27,12 @@ const routes = [{
         component: () => import('../views/Me.vue')
       },
       {
-        path:'/address',
+        path: '/address',
         name: 'address',
         component: () => import('../views/Address.vue')
       },
       {
-        path:'/city',
+        path: '/city',
         name: 'city',
         component: () => import('../views/City.vue')
       },
@@ -48,12 +47,36 @@ const routes = [{
     path: '/search',
     name: 'search',
     component: () => import('../views/Search.vue')
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    redirect:'/goods',
+    component: () => import('../views/Shops/Shop.vue'),
+    children: [
+      {
+        path: '/goods',
+        name: 'Goods',
+        component: () => import('../views/Shops/Goods.vue')
+      },
+      {
+        path: '/comments',
+        name: 'comments',
+        component: () => import('../views/Shops/Comments.vue')
+      },
+      {
+        path: '/seller',
+        name: 'seller',
+        component: () => import('../views/Shops/Seller.vue')
+      }
+    ]
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
+  linkActiveClass: 'active',
   routes
 })
 

@@ -16,6 +16,7 @@ export default {
   },
 
   methods:{
+    // 获取定位方法
     getLocation() {
       const self = this; //this 是当前的vue实例
       // console.log(self);

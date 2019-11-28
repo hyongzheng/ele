@@ -21,7 +21,7 @@
       </div>
       <!-- 搜索得到时 -->
       <div v-else>
-        <SearchIndex @myclick="shopItemClick" :data="result.restaurants" />
+        <SearchIndex @myclick="$router.push('/shop')" :data="result.restaurants" />
         <SearchIndex @myclick="shopItemClick" :data="result.words" />
       </div>
     </div>
