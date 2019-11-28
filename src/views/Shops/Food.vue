@@ -33,7 +33,7 @@
 
 <script>
 /* 
-1. 这个动画好晃眼
+1. 这个动画好晃眼，（调成0px后解决了）
 
 */
 import CartControll from "../../components/Shops/CartControll";
@@ -146,7 +146,7 @@ export default {
 .move-enter-active,
 .move-leave-active {
   transition: all 0.5s ease-in;
-  transform: translate(0, -500px);
+  transform: translate(0, 0px);
 }
 
 .move-enter,
